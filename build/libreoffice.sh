@@ -18,7 +18,7 @@ DEPS_FILE="libreoffice_deps.tar.gz"
 PREFIX=/app/vendor/libreoffice/deps
 mkdir -p $PREFIX
 
-temp_dir=$(mktemp -d /tmp/libreoffice.XXXXXXXXXX)
+temp_dir=$(mktemp -d tmp/libreoffice.XXXXXXXXXX)
 cd ${temp_dir}
 
 # Release dir
@@ -101,5 +101,6 @@ cd ${temp_dir}
 # Compress all dependencies
 tar pczf ${DEPS_FILE} ${PREFIX}
 mv ${DEPS_FILE} release/${DEPS_FILE}
-
+cd
+rm -r temp_dir
 echo "=================================== DONE ================================"
