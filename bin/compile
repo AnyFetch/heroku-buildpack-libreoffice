@@ -10,7 +10,7 @@ VERSION="4.1.4"
 
 # LibreOffice Binaries URL
 FILE_NAME=libreoffice${VERSION}_x86-64.tar.gz
-BUILDPACK_LIBREOFFICE_PACKAGE=https://sourceforge.net/projects/herokubuildpacklibreoffice/files/${FILE_NAME}
+BUILDPACK_LIBREOFFICE_PACKAGE=https://sourceforge.net/projects/herokulibreofficebuildpack/files/${FILE_NAME}
 ARCHIVE_NAME=opt/libreoffice4.1
 
 # LibreOffice Dependencies URL
