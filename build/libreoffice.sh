@@ -102,5 +102,4 @@ cd ${temp_dir}
 tar pvczf ${DEPS_FILE} ${PREFIX}
 mv ${DEPS_FILE} release/${DEPS_FILE}
 cd
-rm -r temp_dir
 echo "=================================== DONE ================================"
