@@ -11,7 +11,7 @@ VERSION="4.4.1"
 # LibreOffice Binaries URL
 FILE_NAME=libreoffice${VERSION}_x86-64.tar.gz
 BUILDPACK_LIBREOFFICE_PACKAGE=http://ktb.amoki.fr/${FILE_NAME}
-ARCHIVE_NAME=libreoffice${VERSION}
+ARCHIVE_NAME=app/vendor/libreoffice${VERSION}
 
 # LibreOffice Dependencies URL
 DEPS_FILE_NAME=libreoffice_deps.tar.gz
