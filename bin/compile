@@ -10,12 +10,12 @@ VERSION="4.4.1"
 
 # LibreOffice Binaries URL
 FILE_NAME=libreoffice${VERSION}_x86-64.tar.gz
-BUILDPACK_LIBREOFFICE_PACKAGE=https://sourceforge.net/projects/herokulibreofficebuildpack/files/${FILE_NAME}
-ARCHIVE_NAME=opt/libreoffice4.1
+BUILDPACK_LIBREOFFICE_PACKAGE=http://ktb.amoki.fr/${FILE_NAME}
+ARCHIVE_NAME=libreoffice${VERSION}
 
 # LibreOffice Dependencies URL
 DEPS_FILE_NAME=libreoffice_deps.tar.gz
-DEPS_BUILDPACK_LIBREOFFICE_PACKAGE=https://sourceforge.net/projects/herokubuildpacklibreoffice/files/${DEPS_FILE_NAME}
+DEPS_BUILDPACK_LIBREOFFICE_PACKAGE=http://ktb.amoki.fr/${DEPS_FILE_NAME}
 DEPS_ARCHIVE_NAME=app/vendor/libreoffice/deps
 
 mkdir -p $CACHE_DIR
