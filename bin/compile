@@ -32,6 +32,7 @@ mkdir -p $CACHE_DIR
 echo "-----> LibreOffice: Extracting LibreOffice ${VERSION} binaries to ${BUILD_DIR}/vendor/libreoffice"
 mkdir -p $CACHE_DIR/$ARCHIVE_NAME
 mkdir -p $BUILD_DIR/vendor
+echo "-----> extract $CACHE_DIR/$FILE_NAME to $CACHE_DIR"
 tar xzf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
 echo "-----> move $CACHE_DIR/$ARCHIVE_NAME to $BUILD_DIR/vendor/libreoffice"
 mv $CACHE_DIR/$ARCHIVE_NAME $BUILD_DIR/vendor/libreoffice
