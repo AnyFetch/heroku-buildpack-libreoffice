@@ -35,7 +35,7 @@ do
   ar p "$f" data.tar.gz | tar zx
 done
 
-tar pczf ${LIBREOFFICE_BINARIES_FILE} ./
+tar pczf ${LIBREOFFICE_BINARIES_FILE} opt
 mv ${LIBREOFFICE_BINARIES_FILE} "${temp_dir}/release/${LIBREOFFICE_BINARIES_FILE}"
 cd ${temp_dir}
 

@@ -11,7 +11,7 @@ VERSION="4.4.1"
 # LibreOffice Binaries URL
 FILE_NAME=libreoffice${VERSION}_x86-64.tar.gz
 BUILDPACK_LIBREOFFICE_PACKAGE=http://ktb.amoki.fr/${FILE_NAME}
-ARCHIVE_NAME=app/vendor/libreoffice${VERSION}
+ARCHIVE_NAME=app/vendor/libreoffice
 
 # LibreOffice Dependencies URL
 DEPS_FILE_NAME=libreoffice_deps.tar.gz
@@ -19,15 +19,15 @@ DEPS_BUILDPACK_LIBREOFFICE_PACKAGE=http://ktb.amoki.fr/${DEPS_FILE_NAME}
 DEPS_ARCHIVE_NAME=app/vendor/libreoffice/deps
 
 mkdir -p $CACHE_DIR
-if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
+#if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
   echo "-----> LibreOffice: Downloading LibreOffice ${VERSION} binaries from ${BUILDPACK_LIBREOFFICE_PACKAGE}"
   curl -L $BUILDPACK_LIBREOFFICE_PACKAGE -o $CACHE_DIR/$FILE_NAME
-fi
+#fi
 
-if ! [ -e $CACHE_DIR/$DEPS_FILE_NAME ]; then
+#if ! [ -e $CACHE_DIR/$DEPS_FILE_NAME ]; then
   echo "-----> LibreOffice: Downloading LibreOffice dependencies (gettext, dbus, libffi, glib, dbus-glib) from ${DEPS_BUILDPACK_LIBREOFFICE_PACKAGE}"
   curl -L $DEPS_BUILDPACK_LIBREOFFICE_PACKAGE -o $CACHE_DIR/$DEPS_FILE_NAME
-fi
+#fi
 
 echo "-----> LibreOffice: Extracting LibreOffice ${VERSION} binaries to ${BUILD_DIR}/vendor/libreoffice"
 mkdir -p $CACHE_DIR/$ARCHIVE_NAME
